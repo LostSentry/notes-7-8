@@ -1,0 +1,8 @@
+Java object: made from a class def: contains data (variables) and or it can do things (with methods)
+Ex. ArrayList
+one class def can be used to make one or many objects
+think of a blueprint
+
+focus class on one task
+
+
