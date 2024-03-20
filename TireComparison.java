@@ -16,6 +16,16 @@ public class TireComparison {
             tireList.add(tire);
         }while (yesNoInput("More tires to add to compare?"));
 
+        printReportTable();
+    }
+
+    private static Tire printReportTable() {
+        String name = stringInput("Enter name of tire");
+        double price = positiveDoubleInput("Enter price of " + name + "?");
+        int warranty = positiveIntInput("Enter number of miles warranty?");
+
+        Tire tire = new Tire(name, price, warranty);
+        return tire;
     }
 
     private static Tire getTireInfo() {
