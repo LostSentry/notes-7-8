@@ -2,6 +2,8 @@ public class SwimmingPoolProgram {
     public static void main(String[] args) {
         Pool ymca = new Pool("YMCA", 50);
 
+        // ymca.name = "ymca;   // not allowed
+
         double totalSwam = ymca.distanceForLaps(6);
 
         System.out.println(ymca);

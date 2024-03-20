@@ -3,7 +3,7 @@ public class Pool {
     private String name;      // Field/variable
     private double length;    //Field/Variable
 
-    Pool(String name, double length) { // Constructor
+    public Pool(String name, double length) { // Constructor
         this.name = name;
         this.length = length;
     }

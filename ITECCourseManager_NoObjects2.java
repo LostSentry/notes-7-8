@@ -1,15 +1,12 @@
 
-
-
 import java.util.ArrayList;
-
 
 public class ITECCourseManager_NoObjects2 {
     public static void main(String[] args) {
 
         ITECCourse maintenanceCourse = new ITECCourse("Microcomputer Systems Maintenance",1310, 20);
 
-        //Add some students.   TODO check that we have not exceeded the max number for the class
+        //Add some students.
         maintenanceCourse.addStudents("Anna");
         maintenanceCourse.addStudents("Bill");
         maintenanceCourse.addStudents("Carl");
@@ -35,7 +32,7 @@ public class ITECCourseManager_NoObjects2 {
         softwareDevPro.addStudents("Izzy");
 
         int totalEnrolled = softwareDevPro.getNumberOfStudents();
-        System.out.println(softwareDevPro.name + " has " + totalEnrolled + " students");
+        System.out.println(softwareDevPro.getName() + " has " + totalEnrolled + " students");
 
 
 
@@ -43,6 +40,6 @@ public class ITECCourseManager_NoObjects2 {
         smallCourse.addStudents("J");
         smallCourse.addStudents("M");
         smallCourse.addStudents("Y");
-        smallCourse.addStudents("Trickster");
+        smallCourse.addStudents("Extra");
     }
 }

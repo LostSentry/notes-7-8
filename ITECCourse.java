@@ -4,19 +4,45 @@ import java.util.List;
 public class ITECCourse {
 
     // data-fields-instance variables
-    String name;
-    int code;
-    List<String> students;
-    int maxStudents;
+    private String name;
+    private int code;
+    private List<String> students;
+    private int maxStudents;
 
-    ITECCourse(String courseName, int courseCode, int courseMaxStudents) {
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public int getMaxStudents() {
+        return maxStudents;
+    }
+
+    public void setMaxStudents(int maxStudents) {
+        if (maxStudents < 0) {
+            return;
+        }
+        this.maxStudents = maxStudents;
+    }
+
+    public ITECCourse(String courseName, int courseCode, int courseMaxStudents) {
         name = courseName;
         code = courseCode;
         maxStudents = courseMaxStudents;
         students = new ArrayList<>();
     }
 
-    void addStudents(String studentName) {
+    public void addStudents(String studentName) {
 
         if (students.size() == maxStudents) {
             System.out.println("Course is full, can't add " + studentName);
@@ -25,7 +51,7 @@ public class ITECCourse {
         }
     }
 
-    void writeCourseInfo() {
+    public void writeCourseInfo() {
         System.out.println("Course Name: " + name);
         System.out.println("Course Code: " + code);
         System.out.println("Students enrolled:");
@@ -36,11 +62,11 @@ public class ITECCourse {
         System.out.println("The max number of students that can enroll in this course is  " + maxStudents);
     }
 
-    int getNumberOfStudents() {
+    public int getNumberOfStudents() {
         return students.size();
     }
 
-    void removeStudent(String studentname) {
+    public void removeStudent(String studentname) {
         if (students.contains(studentname)) {
             students.remove(studentname);
             System.out.println(studentname + " was unenrolled from " + name);
